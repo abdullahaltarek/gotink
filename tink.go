@@ -104,6 +104,7 @@ func get(f func(w http.ResponseWriter, r *http.Request)) func(http.ResponseWrite
 		if r.Method != "GET" {
 			w.WriteHeader(405)
 			fmt.Fprint(w, "Method not allowed")
+			return
 		}
 		f(w, r)
 	}
@@ -134,6 +135,7 @@ func delete_(f func(w http.ResponseWriter, r *http.Request)) func(http.ResponseW
 		if r.Method != "DELETE" {
 			w.WriteHeader(405)
 			fmt.Fprint(w, "Method not allowed")
+			return
 		}
 		f(w, r)
 	}
