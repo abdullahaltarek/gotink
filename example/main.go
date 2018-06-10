@@ -1,7 +1,7 @@
 package main
 
 import (
-	"BookAPI/gotink/tinknk/tink"
+	"github.com/cyantarek/gotink"
 	"net/http"
 )
 
