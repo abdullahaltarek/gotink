@@ -13,7 +13,7 @@ func main() {
 	app := tink.New()
 	app.Port = "8021"
 	app.Log = true
-	app.Json("GET", "/aaa", HttpHandler)
+	app.Http("GET", "/aaa", HttpHandler)
 	app.Json("GET", "/bbb", JsonHandler)
 	app.Run()
 }
